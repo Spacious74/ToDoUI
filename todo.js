@@ -28,7 +28,10 @@ function addtask() {
     let check = document.createElement("input");
     check.setAttribute("type", "checkbox");
     check.setAttribute("name", "check");
-    check.setAttribute("id", "checkbox");
+    let checkId = "checkbox" + t;
+    check.setAttribute("id", checkId);
+    let checkfun = "checkedOrNot(" + t + ")";
+    check.setAttribute("onclick", checkfun);
 
     taskcont.appendChild(check);
 
@@ -38,17 +41,46 @@ function addtask() {
 
     taskcont.append(textCont);
 
-    // button inside task tab
+    // delete button inside task tab
     let dltbutton = document.createElement("button");
     dltbutton.classList.add("btn", "dltbtn");
+    let buttonId = "deleteBtn" + t;
+    dltbutton.setAttribute("id", buttonId);
     dltbutton.innerHTML = '<img src="https://img.icons8.com/material-rounded/24/ffffff/trash.png" class="delicon"/>'
     let fun = "deleteme(" + t + ")";
     dltbutton.setAttribute("onclick", fun);
-    t++;
 
-    taskTab.append(taskcont, dltbutton);
+    // done element
+    let doneElement = document.createElement("div");
+    doneElement.classList.add("done");
+    let doneId = "done" + t;
+    doneElement.setAttribute("id",doneId);
+    doneElement.innerHTML = "Done " + '<img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-thumbs-up-achievements-flaticons-flat-flat-icons-2.png" class="delicon"/>';
+    doneElement.style.display = "none";
+
+    t++;
+    taskTab.append(taskcont,doneElement, dltbutton);
     let totaltask = document.getElementById('taskcontainer').childElementCount;
     document.getElementById('taskcounter').innerHTML = totaltask;
 
     document.querySelector('.textfield').value = "";
+}
+
+function checkedOrNot(t){
+    let checkElement =document.querySelector("#checkbox" + t);
+    // console.log(checkElement.checked);
+    let status = document.getElementById("tasktab" + t);
+    let deleteBtn = document.getElementById("deleteBtn" + t);
+    let done = document.getElementById("done" + t);
+    if(checkElement.checked == true){
+        status.style.backgroundColor = "#c9ffc4";
+        deleteBtn.style.display = "none";
+        done.style.display = "block";
+        
+    }else{
+        status.style.backgroundColor = "#eef1f5";
+        deleteBtn.style.display = "block";
+        done.style.display = "none";
+    }
+
 }

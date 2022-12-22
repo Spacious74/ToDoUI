@@ -11,7 +11,7 @@
     top: 0;
     z-index: 1;
     backdrop-filter: blur(30px);
-    background-color: #ffffffc2;
+    background-color: #e0edf5c2;
     outline: solid 1.5px #D7D7D6;
 }
 
@@ -138,6 +138,7 @@ nav .list {
     border-radius: 15px;
     border: solid 1px #a8a8a8;
     margin-bottom: 15px;
+    height: 40px;
 }
 
 .taskstab .tasktext {
@@ -178,6 +179,7 @@ input[type=checkbox]:checked:before {
 	color: #ffffff !important;
 }
 
+
 .taskstab .dltbtn {
     background-color: #ce3939;
     width: 50px;
@@ -198,4 +200,20 @@ input[type=checkbox]:checked:before {
 .taskstab .dltbtn:active {
     box-shadow: none;
     transform: scale(0.98);
+}
+.done{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #005e00;
+}
+@media only screen and (max-width: 400px) {
+    .navbarcontainer nav{
+        width: 95%;
+    }
+    .todocontainer {
+        width: 95%;
+    }
+    .mytaskcontainer {
+        width: 95%;
+    }
 }
