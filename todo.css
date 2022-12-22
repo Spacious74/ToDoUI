@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+
+.navbarcontainer {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(30px);
+    background-color: #ffffffc2;
+    outline: solid 1.5px #D7D7D6;
+}
+
+.navbarcontainer nav {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+nav .logo {
+    font-size: 21px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+nav .listcontainer {
+    width: 70%;
+}
+
+nav .list {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    font-size: 13px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.list .btn {
+    background-color: #0071E3;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    width: 45px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.todocontainer {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.todocontainer .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.todocontainer .taskandbtn {
+    display: flex;
+    /* margin-bottom: 30px; */
+    justify-content: space-between;
+}
+
+.todocontainer .textfield {
+    width: 99%;
+    padding: 10px 12px;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.todocontainer .textfield:focus {
+    outline: solid 2px #0071e37a;
+}
+
+.btn {
+    background-color: #0071E3;
+    width: 150px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 3px 8px #00000046;
+    transition: all 0.2s ease;
+}
+
+.taskandbtn .btn:hover {
+    background-color: #007dfa;
+}
+
+.taskandbtn .btn:active {
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+.mytaskcontainer {
+    width: 75%;
+    margin: auto;
+}
+
+.mytaskcontainer .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mytaskcontainer .tasktabcontainer {
+    margin-top: 20px;
+    /* overflow-y: scroll;
+    height: 400px; */
+}
+
+.tasktabcontainer .taskstab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #eef1f5;
+    border-radius: 15px;
+    border: solid 1px #a8a8a8;
+    margin-bottom: 15px;
+}
+
+.taskstab .tasktext {
+    font-size: 1.2rem;
+}
+/* 
+.taskstab #checkbox {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+} */
+input[type=checkbox] {
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	outline: none;
+	content: none;	
+}
+
+input[type=checkbox]:before {
+	font-family: "FontAwesome";
+    content: "\f00c";
+    font-size: 20px;
+    color: transparent !important;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b3b3b3;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+input[type=checkbox]:checked:before {
+    background-color: #0071E3;
+	color: #ffffff !important;
+}
+
+.taskstab .dltbtn {
+    background-color: #ce3939;
+    width: 50px;
+    padding: 8px 10px;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    box-shadow: none;
+}
+.delicon{
+    display: inline;
+    vertical-align: middle;
+}
+
+.taskstab .dltbtn:hover {
+    box-shadow: 0px 2px 8px #ff000080;
+}
+
+.taskstab .dltbtn:active {
+    box-shadow: none;
+    transform: scale(0.98);
+}
