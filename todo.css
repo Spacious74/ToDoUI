@@ -208,12 +208,12 @@ input[type=checkbox]:checked:before {
 }
 @media only screen and (max-width: 400px) {
     .navbarcontainer nav{
-        width: 95%;
+        width: 98%;
     }
     .todocontainer {
-        width: 95%;
+        width: 98%;
     }
     .mytaskcontainer {
-        width: 95%;
+        width: 98%;
     }
 }
