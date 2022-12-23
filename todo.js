@@ -49,8 +49,11 @@ function addtask() {
     taskcont.appendChild(check);
 
     // text inside task tab
-    let textCont = document.createElement("div");
-    textCont.innerText = task;
+    let textCont = document.createElement("input");
+    textCont.value = task;
+    textCont.setAttribute("class","tasktext");
+    textCont.setAttribute("disabled",true);
+
 
     taskcont.append(textCont);
 
@@ -68,7 +71,7 @@ function addtask() {
     doneElement.classList.add("done");
     let doneId = "done" + t;
     doneElement.setAttribute("id", doneId);
-    doneElement.innerHTML = "Done " + '<img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-thumbs-up-achievements-flaticons-flat-flat-icons-2.png" class="delicon"/>';
+    doneElement.innerHTML = "Done ";
     doneElement.style.display = "none";
 
     t++;
