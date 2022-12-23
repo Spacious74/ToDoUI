@@ -117,6 +117,33 @@ nav .list {
     transform: scale(0.98);
 }
 
+.emptyContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.emptyContainer .image{
+    width: 40%;
+}
+.image .illustration{
+    width: 100%;
+}
+.emptyContainer .text{
+    width: 60%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(135deg, #0000ff 50%,#ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text .letitblack{
+    background: -webkit-linear-gradient(135deg, #181818,#181818);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
+
 .mytaskcontainer {
     width: 85%;
     margin: auto;
@@ -210,14 +237,30 @@ input[type=checkbox]:checked:before {
     font-weight: bold;
     color: #005e00;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
+    .logo{
+        display: flex;
+        width: 50%;
+        align-items: center;
+    }
     .navbarcontainer nav{
-        width: 98%;
+        width: 95%;
     }
     .todocontainer {
-        width: 98%;
+        width: 95%;
     }
     .mytaskcontainer {
-        width: 98%;
+        width: 95%;
+    }
+    .emptyContainer{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .emptyContainer .image{
+        width: 100%;
+    }
+    .emptyContainer .text{
+        width: 100%;
+        font-size: 1.2rem;
     }
 }
