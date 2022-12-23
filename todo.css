@@ -141,7 +141,7 @@ nav .list {
     background: -webkit-linear-gradient(135deg, #181818,#181818);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .mytaskcontainer {
@@ -237,20 +237,20 @@ input[type=checkbox]:checked:before {
     font-weight: bold;
     color: #005e00;
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 600px) {
     .logo{
         display: flex;
         width: 50%;
         align-items: center;
     }
     .navbarcontainer nav{
-        width: 95%;
+        width: 94%;
     }
     .todocontainer {
-        width: 95%;
+        width: 94%;
     }
     .mytaskcontainer {
-        width: 95%;
+        width: 94%;
     }
     .emptyContainer{
         flex-direction: column;
