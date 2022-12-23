@@ -49,10 +49,9 @@ function addtask() {
     taskcont.appendChild(check);
 
     // text inside task tab
-    let textCont = document.createElement("input");
-    textCont.value = task;
+    let textCont = document.createElement("div");
+    textCont.innerText = task;
     textCont.setAttribute("class","tasktext");
-    textCont.setAttribute("disabled",true);
 
 
     taskcont.append(textCont);

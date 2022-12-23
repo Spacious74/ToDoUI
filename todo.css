@@ -185,8 +185,8 @@ nav .list {
 
 .taskstab .tasktext {
     font-size: 1.4rem;
-    background-color: transparent;
-    border: none;
+    /* background-color: transparent;
+    border: none; */
 }
 /* 
 .taskstab #checkbox {
