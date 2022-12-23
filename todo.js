@@ -12,6 +12,9 @@ let t = 1;
 
 function addtask() {
     let task = document.querySelector('.textfield').value;
+    if(task.length < 2){
+        return;
+    }
     let taskTabContainer = document.querySelector(".tasktabcontainer");
     let taskTab = document.createElement('div');
     taskTab.classList.add("taskstab");
