@@ -189,7 +189,7 @@ nav .list {
     border-radius: 15px;
     border: solid 1px #a8a8a8;
     margin-bottom: 15px;
-    /* height: 40px; */
+    height: 40px;
 }
 .checkandtext{
     display: flex; 
