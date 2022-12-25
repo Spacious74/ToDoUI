@@ -7,6 +7,9 @@ if (taskTabContainer.childElementCount == 0) {
     document.querySelector(".emptyContainer").style.display = 'none';
 }
 
+let date = new Date();
+document.getElementById("date").innerHTML = "Date - " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+
 let filter = document.getElementById("filter");
 filter.addEventListener("keyup", filterTodos)
 function filterTodos(e) {
@@ -51,6 +54,7 @@ function editme(n){
     inputField.style.outline = "solid 1px grey";
     inputField.style.borderRadius = "6px";
     inputField.style.padding = "5px";
+    inputField.setAttribute("maxlength", "30");
 
     inputField.autofocus = "true";
     let Edit = document.getElementById('editBtn' + n);
@@ -190,6 +194,7 @@ function checkedOrNot(t) {
         done.style.display = "block";
 
     } else {
+        // done.innerHTML = ""; 
         status.style.backgroundColor = "#eef1f5";
         deleteBtn.style.display = "block";
         editBtn.style.display = "block";

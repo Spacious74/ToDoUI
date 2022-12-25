@@ -90,6 +90,12 @@ nav .list {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading #date{
+    font-size: 1.2rem;
 }
 
 .todocontainer .taskandbtn {
@@ -291,7 +297,6 @@ input[type=checkbox]:checked:before {
     font-weight: bolder;
     text-transform: uppercase;
     color: #005e00;
-    width: 60px;
 }
 
 .btns{
@@ -357,5 +362,12 @@ input[type=checkbox]:checked:before {
 
     .editbtn{
         margin-left: 0px;
+    }
+    .done{
+        /* width: 120px; */
+        font-size: 0.9rem;
+    }
+    .heading #date{
+        font-size: 0.9rem;
     }
 }
