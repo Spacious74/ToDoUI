@@ -299,6 +299,9 @@ input[type=checkbox]:checked:before {
         align-items: center;
     }
 
+    .list .searchbar {
+        width: 220px;
+    }
     .navbarcontainer nav {
         width: 94%;
     }
