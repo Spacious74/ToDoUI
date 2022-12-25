@@ -10,9 +10,7 @@ if (taskTabContainer.childElementCount == 0) {
 let filter = document.getElementById("filter");
 filter.addEventListener("keyup", filterTodos)
 function filterTodos(e) {
-
     //convert to lowercase
-
     let searchText = filter.value.toLowerCase();
     let allTodosList = document.querySelector(".tasktabcontainer").children;
     
@@ -26,10 +24,13 @@ function filterTodos(e) {
             item.style.display = 'none'
         }
     })
-
-
 }
 
+let addBar = document.querySelector('.textfield');
+addBar.addEventListener('keyup', ()=>{
+    let counter = document.getElementById('charCounter');
+    counter.innerText = addBar.value.length + "/30";
+});
 
 
 
@@ -49,6 +50,8 @@ function editme(n){
     inputField.style.backgroundColor = "white";
     inputField.style.outline = "solid 1px grey";
     inputField.style.borderRadius = "6px";
+    inputField.style.padding = "5px";
+
     inputField.autofocus = "true";
     let Edit = document.getElementById('editBtn' + n);
     Edit.style.display = "none";
@@ -167,6 +170,8 @@ function addtask() {
     document.getElementById('taskcounter').innerHTML = totaltask;
 
     document.querySelector('.textfield').value = "";
+    let counter = document.getElementById('charCounter');
+    counter.innerText = "0/30";
 }
 
 function checkedOrNot(t) {

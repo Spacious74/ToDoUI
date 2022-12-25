@@ -110,6 +110,12 @@ nav .list {
     outline: solid 2px #0071e37a;
 }
 
+.todocontainer .characters{
+    font-size: 0.7rem;
+    margin-top: 5px;
+    color: grey;
+}
+
 .btn {
     background-color: #0071E3;
     width: 150px;
@@ -285,7 +291,7 @@ input[type=checkbox]:checked:before {
     font-weight: bolder;
     text-transform: uppercase;
     color: #005e00;
-    width: 50px;
+    width: 60px;
 }
 
 .btns{
@@ -330,7 +336,7 @@ input[type=checkbox]:checked:before {
 
     .checkandtext .tasktext{
         font-size: 1rem;
-        width: 90%;
+        width: 91%;
     }
 
     .tasktabcontainer .taskstab{

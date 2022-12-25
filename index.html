@@ -29,9 +29,10 @@
     <div class="todocontainer">
         <div class="heading">Let's add a task</div>
         <div class="taskandbtn">
-            <input type="text" class="textfield" placeholder="Write your task here..." id="task">
+            <input type="text" class="textfield" placeholder="Write your task here..." id="task" maxlength="30">
             <button class="btn" onclick="addtask()">ADD</button>
         </div>
+        <div class="characters">Maximum characters allowed - <span id="charCounter">0/30</span> </div>
         <!-- <hr color="#e9e9e9"> -->
     </div>
 
