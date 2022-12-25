@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./todo.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
 </head>
-
 <body>
     <header class="navbarcontainer">
         <nav>
@@ -19,9 +18,7 @@
             </div>
             <div class="listcontainer">
                 <ul class="list">
-                    <!-- <input type="search" class="searchbar" placeholder="Search Tasks..."> -->
-                    <li style="color: grey;">Today</li>
-                    <li>Yesterday</li>
+                    <input type="search" class="searchbar" placeholder="Search Tasks..." id="filter">   
                     <!-- <button class="btn">Buy</button> -->
                 </ul>
             </div>
@@ -53,16 +50,17 @@
         </div>
         
         <div class="tasktabcontainer" id="taskcontainer">
-
             <!-- <div class="taskstab" id="tasktab1">
-                <div style="display: flex;">
-                    <input type="checkbox" name="check" id="checkbox">
-                    <div class="tasktext">First work i have to do</div>
+                <div class="checkandtext">
+                    <input type="checkbox" name="check" id="checkbox1" onclick="checkedOrNot(1)">
+                    <input type="text" class="tasktext" id="edittext1" readonly="true">
                 </div>
-                <div class="done">Done <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-thumbs-up-achievements-flaticons-flat-flat-icons-2.png" class="delicon"/></div>
-                <button class="btn dltbtn" onclick="deleteme(1)"><img src="https://img.icons8.com/material-rounded/24/ffffff/trash.png" class="delicon"/></button>
+                <div class="done" id="done1" style="display: none;">Done</div>
+                <div class="btns" id="btncon1">
+                    <button class="btn editbtn" id="editBtn1" onclick="editme(1)"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/pencil--v1.png" class="delicon" style="margin-bottom: 5px;"></button>
+                    <button class="btn savebtn" id="saveBtn1" onclick="saveme(1)" style="display: none;"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/save--v1.png" class="delicon" style="margin-bottom: 5px;"></button><button class="btn dltbtn" id="deleteBtn1" onclick="deleteme(1)"><img src="https://img.icons8.com/material-rounded/24/ffffff/trash.png" class="delicon"></button>
+                </div>
             </div> -->
-            
         </div>
     </div>
     <script src="./todo.js"></script>
