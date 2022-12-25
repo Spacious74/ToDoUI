@@ -86,6 +86,9 @@ function addtask() {
     let task = document.querySelector('.textfield').value;
     if (task.length < 2) {
         return;
+    } else if (task.trim() == ""){
+        alert("Please enter a task not spaces only ");
+        return;
     }
     document.querySelector('.emptyContainer').style.display = 'none';
     let taskTabContainer = document.querySelector(".tasktabcontainer");
@@ -111,7 +114,7 @@ function addtask() {
 
     // text inside task tab
     let textCont = document.createElement("input");
-    textCont.value = task;
+    textCont.value = task.trim();
     textCont.setAttribute("type","text");
     textCont.setAttribute("class","tasktext");
     let textId = "edittext" + t;
