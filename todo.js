@@ -8,7 +8,7 @@ if (taskTabContainer.childElementCount == 0) {
 }
 
 let date = new Date();
-document.getElementById("date").innerHTML = "Date - " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+document.getElementById("date").innerHTML = "Date - " + date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
 
 let filter = document.getElementById("filter");
 filter.addEventListener("keyup", filterTodos)
