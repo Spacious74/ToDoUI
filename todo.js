@@ -69,8 +69,12 @@ function saveme(n){
     if(editedText.length == 0){
         alert("Please enter a task");
         return;
+    } else  if (editedText.trim() == ""){
+        alert("Please enter a task not spaces only ");
+        return;
     }
     let inputField = document.getElementById('edittext' + n);
+    inputField.value = editedText.trim();
     inputField.setAttribute('readonly', true);
     inputField.style.backgroundColor = "transparent";
     inputField.style.outline = "none";
